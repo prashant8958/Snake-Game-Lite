@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="main.js" defer></script>
+</head>
+<body>
+  <main id="wrapper">
+    <section id="introduction" aria-labelledby="title">
+      <table><tr><td>
+      <h1 id="title">🐍 Snake Game 🐍</h1>
+      <p id="instructions">
+        Use arrow keys to control the snake.<br>
+        Eat apples to grow and score points.<br>
+        Avoid walls and yourself!
+      </p>
+      <button id="startButton" aria-label="Start game">Start</button>
+      </td></tr></table>
+    </section>
+
+    <section id="gameContainer">
+  <table>
+    <tr>
+      <td rowspan="3">
+        <canvas id="gameBoard" width="1000" height="500"></canvas>
+      </td>
+      <td>
+        <div id="scoreArea">
+          <label for="scoreDisplay">Score:</label>
+          <span id="scoreDisplay" aria-live="polite">0</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="resetButton">Reset</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="endGameButton">End Game</button>
+      </td>
+    </tr>
+  </table>
+</section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body, html {
+  min-height: 100vh;
+  background: aliceblue;
+  font-family: 'Comic Neue', cursive, sans-serif;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+#introduction table {
+  border-collapse: separate;
+  margin: 20px auto;
+  background: whitesmoke;
+  box-shadow: none;
+  
+}
+#instructions {
+  font-size: 1.1em;
+  margin-bottom: 24px;
+  background: #f8f8ff;
+  border: 5px solid #48c;
+  border-radius: 20px;
+  padding: 14px 24px;
+  box-shadow: 0 2px 8px rgba(70,130,180,.1);
+  max-width: 550px;
+  display: inline-block;
+}
+button {
+  font-size: 1.2em;
+  padding: 10px 28px;
+  border: 4px solid #48c;
+  border-radius: 18px;
+  background: #fff;
+  cursor: pointer;
+  margin: 8px;
+  transition: background .2s;
+}
+button:active, button:focus {
+  background: #e0eefe;
+  outline: none;
+}
+#gameContainer {
+  display: none;
+}
+#gameContainer table {
+  border-collapse: separate;
+  margin: 20px auto;
+  background: gray;
+  box-shadow: none;
+}
+
+#gameContainer td {
+  padding: 12px 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#gameBoard {
+  display: block;
+  border: 3px solid #48c;
+  border-radius: 10px;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(80,120,200,.1);
+}
+
+#scoreArea {
+  font-size: 2.3em;
+  color: #246;
+  background: #f5f5fa;
+  padding: 8px 20px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(100,130,180,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 14px;
+}
+
+#resetButton,
+#endGameButton {
+  font-size: 1.1em;
+  padding: 11px 28px;
+  border: 4px solid #48c;
+  border-radius: 18px;
+  margin: 8px 0;
+  width: 96%;
+  background: #fff;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+@media (max-width: 900px) {
+  #gameContainer table,
+  #gameContainer td {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+  }
+  #gameBoard {
+    width: 92vw;
+    max-width: 600px;
+    height: 150px;
+    max-height: 180px;
+    margin: 0 auto 14px auto;
+  }
+}
+@media (max-width: 600px) {
+  #gameBoard {
+    width: 98vw;
+    height: 120px;
+    max-width: 340px;
+    max-height: 140px;
+    margin: 0 auto 10px auto;
+  }
+  #scoreArea,
+  #resetButton,
+  #endGameButton {
+    font-size: 1em;
+    max-width: 100vw;
+    margin: 8px auto;
+  }
+}
+
+/* Blurred board when game ends */
+.blurred {
+  filter: blur(1px) grayscale(35%);
+  transition: filter 0.3s;
+}
